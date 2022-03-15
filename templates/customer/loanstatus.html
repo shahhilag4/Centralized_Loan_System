@@ -1,0 +1,48 @@
+
+{% extends 'customer/DashboardBase.html' %}
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+{% block body %}
+<div class="container-fluid mx-2">
+
+    <div class="table table-hover">
+
+        <table class="table-responsive table-striped table-bordered example" style="width:100%">
+            <div class="container">
+                <h3 class="lead text-center">Loan Status</h3>
+            </div>
+            <thead>
+                <tr>
+                  <th>Bank</th>
+                  <th>Branch</th>
+                  <th>Loan Type</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>ClerkApprove</th>
+                  <th>ManagerApprove</th>
+                </tr>
+            </thead>
+            <tbody>
+              {% for data in files %}
+                <tr>
+                  <td>{{data.bank}}</td>
+                  <td>{{data.branch}}</td>
+                  <td>{{data.loantype}}</td>
+                  <td>{{data.date}}</td>
+                  <td>{{data.amount}}</td>
+                  <td>{{data.clerkapprove}}</td>
+                  <td>{{data.managerapprove}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+    $('.example').DataTable();
+    </script>
+{% endblock body %}

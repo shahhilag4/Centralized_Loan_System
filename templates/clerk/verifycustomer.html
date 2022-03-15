@@ -1,0 +1,46 @@
+<!-- verify customer page -->
+
+
+{% extends 'clerk/DashboardBase.html' %}
+{% block body %}
+<div class="container-fluid mx-2">
+  <div class="table table-hover">
+  <table  class="table-responsive table-striped table-bordered example" style="width:100%;border: 0px;">
+    <thead>
+      <tr>
+        <th scope="col">Loan Type</th>
+        <th scope="col">Date</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Time</th>
+        <th scope="col">Documents</th>
+        <th scope="col">Total Loan</th>
+        <th scope="col">Approve</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in files %}
+    <tr>
+      <td>{{data.loantype}}</td>
+      <td>{{data.date}}</td>
+      <td>{{data.amount}}</td>
+      <td>{{data.time}}</td>
+      <td><a href="/viewdocuments/{{data.customerid}}/{{data.pan}}"><button>View Documents</button></a></td>
+      <td><a href="/track/{{data.customerid}}/{{data.pan}}"><button class="btn1"> Track </button></a></td>
+      {% if data.approve!='YES' %}
+      <td><a href="/clerkapprovecustomer/{{data.customerid}}/{{data.ifsc}}/{{data.loantype}}"><button>Approve</button></a><a href="/clerkremovecustomer/{{data.customerid}}/{{data.ifsc}}/{{data.loantype}}"><button>Reject</button></a> </td>
+      {% else %}
+      <td>Approved on {{data.date}}</td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+    $('.example').DataTable();
+    </script>
+{% endblock body %}

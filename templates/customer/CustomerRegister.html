@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<title>Customer Register</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../static/css/login.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+</head>
+
+<body>
+	<section id="HOME">
+	<header>
+		<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+		<div class="toggle" onclick="toggleMenu();"></div>
+		<ul class="menu">
+			<li><a href="/contactus" onclick="toggleMenu();">CONTACT US</a></li>
+		</ul>
+	</header>
+	<div class="card">
+		<form action="/customerregister" method="POST">
+			<h2 class="title">Customer-Registration</h2>
+			{% if err is defined %}
+        
+            <strong>OOPs! </strong>{{err}}
+            
+			{% endif %}
+			
+			{% if message is defined %}
+			<div >
+				{{message}}
+				
+			</div>
+			{% endif %}
+			<p class="or"></p>
+			
+			<div class="email-login">
+				<label for="email"> <b>Name</b></label>
+				<input type="text" placeholder="Enter Name" name="customerName" required>
+				<label for="email"> <b>Enter Pan Number </b></label>
+				<input type="text" placeholder="Enter Pan Number" name="pan" required>
+				<label for="email"> <b>User Id</b></label>
+				<input type="text" placeholder="Enter User Id" name="customerEmail" required>
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="customerPass" required>
+                
+			</div>
+			<button type="submit" class="cta-btn">Submit</button>
+            <div class="selectOp">
+				<p>Already have an account ?<a href="/customerlogin">&nbsp;Login</a>&nbsp;here</p>
+            </div>
+			
+		</section>
+	</form>
+</div>
+
+</section>
+</body>
+
+</html>

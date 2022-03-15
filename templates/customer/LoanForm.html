@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loan Application</title>
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../../static/css/style.css" />
+	<link rel="stylesheet" href="../../static/css/donor.css" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito:wght@300;400&family=Roboto:wght@300&display=swap"
+		rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Roboto:wght@300&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+	<link rel="icon" href="../../static/img/logo1.png" type="image/jpg" sizes="16x16">
+
+</head>
+
+<body>
+	<section id="HOME">
+		<header>
+			<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="menu">
+				<li><a href="/customerhome" onclick="toggleMenu();">Home</a></li>
+			</ul>
+		</header>
+
+		<section class="sect">
+		</section>
+
+		<form enctype = "multipart/form-data" action="/uploadfile/{{loan}}/{{bank}}" method="post">
+				{% if message is defined %}
+				<div class="alert alert-success" role="alert">
+				{{message}}
+					</div>
+				{% endif %}
+
+				{% if message1 is defined %}
+				<div class="alert alert-danger" role="alert">
+				{{message1}}
+					</div>
+				{% endif %}
+			<div class="form-group">
+				<u>
+					<h1>Loan Application</h1>
+				</u>
+			</div>
+			<fieldset>
+				<legend><span class="number">1</span>Enter Loan Amount</legend>
+
+				<div class="drag-area">
+
+					<input type="number" id="quantity" name="amount" min="10000">
+				</div>
+				<legend><span class="number">2</span>Tenure/Time</legend>
+				<div class="drag-area">
+					<select name="time" id="">
+						<option value="12">1</option>
+						<option value="24">2</option>
+						<option value="36">3</option>
+						<option value="48">4</option>
+						<option value="60">5</option>
+						<option value="72">6</option>
+					</select>
+				</div>
+				<legend><span class="number">2</span>Enter IFSC Code/Branch Code</legend>
+
+				<div class="drag-area">
+					<input type="text" id="quantity" name="ifsc" min="10000">
+				</div>
+
+				<legend><span class="number">3</span>Upload Salary Slip Or Financial statement (in pdf)</legend>
+
+				<div class="drag-area">
+					<input type="file" name="file3">
+				</div>
+
+			</fieldset>
+			<div class="form-group">
+				<strong>By submitting this form,</strong><br>
+					I confirm that the information I have provided in here is complete and accurate to the best of my knowledge.
+			</div>
+			<button id="submit" type="submit">Upload</button>
+		</form>
+
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+
+	<script language="javascript">print_state("sts");</script>
+	<script src="../../static/js/java.js"></script>
+
+</body>
+
+</html>

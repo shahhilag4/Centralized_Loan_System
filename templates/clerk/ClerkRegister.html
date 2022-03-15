@@ -1,0 +1,66 @@
+
+<!--Clerk Registration section. -->
+
+
+<html>
+
+<head>
+	<title>Clerk Register</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../static/css/login.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+</head>
+
+<body>
+<section id="HOME">
+		<header>
+			<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="menu">
+				<li><a href="/contactus" onclick="toggleMenu();">CONTACT US</a></li>
+			</ul>
+		</header>	
+	<div class="card">
+		{% if err is defined %}
+        
+            <strong>OOPs! </strong>{{err}}
+            
+        {% endif %}
+
+        {% if message is defined %}
+        <div >
+            {{message}}
+            
+          </div>
+        {% endif %}
+		<form action="/clerkregister" method="POST">
+			<h2 class="title">Registration</h2>
+			
+			<p class="or"></p>
+			
+			<div class="email-login">
+				<label for="email"> <b>IFSC code</b></label>
+				<input type="text" placeholder="Enter IFSC code" name="managerIfsc" required>
+				<label for="email"> <b>Name</b></label>
+				<input type="text" placeholder="Enter Name" name="clerkName" required>
+				<label for="email"> <b>Mobile No</b></label>
+				<input type="text" placeholder="Enter Mobile No." name="clerkMobile" required>
+				<label for="email"> <b>Username</b></label>
+				<input type="text" placeholder="Username" name="userName" required>
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="clerkPass" required>
+                
+			</div>
+			<button type="submit" class="cta-btn">Submit</button>
+            
+			<div class="selectOp">
+                <p>Already have an account ?<a href="/clerklogin">&nbsp;Login</a>&nbsp;here</p>
+            </div>
+		</section>
+	</form>
+</div>
+</section>
+</body>
+
+</html>

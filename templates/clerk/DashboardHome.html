@@ -1,0 +1,119 @@
+
+<!--Dashboard of clerk section -->
+
+
+{% extends 'clerk/DashboardBase.html' %}
+{% block body %}
+<div class="container text-center my-3 border">
+  <h4>Clerk Section</h4>
+  <div class="row mx-2 my-3">
+
+    <div class="col-sm-4 p-3 border">
+      <div class="stat-text">Branch Address</div>
+      <div class="stat-heading">{{branch}}</div>
+    </div>
+    <div class="col-sm-4 p-3 border">
+      <div class="stat-text">Bank Name</div>
+      <div class="stat-heading">{{bank}}</div>
+    </div>
+    <div class="col-sm-4 p-3 border">
+      <div class="stat-text">IFSC code</div>
+      <div class="stat-heading">{{ifsc}}</div>
+    </div>
+
+  </div>
+</div>
+{% if approve=='Yes' %}
+<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="stat-widget-five">
+          <div class="stat-icon dib flat-color-1">
+            <i class="pe-7s-cash"></i>
+          </div>
+          <div class="stat-content">
+            <div class="text-left dib">
+              <div class="stat-text"><span class="">
+                  {% if count %}
+                  {{count}}
+                  {% else %}
+                  0
+                  {% endif %}</span></div>
+              <div class="stat-heading">Total Application Approved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="stat-widget-five">
+          <div class="stat-icon dib flat-color-2">
+            <i class="pe-7s-calculator"></i>
+          </div>
+          <div class="stat-content">
+            <div class="text-left dib">
+              <div class="stat-text"><span class="">{{pending}}</span></div>
+              <div class="stat-heading">Total Pending Application</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="stat-widget-five">
+          <div class="stat-icon dib flat-color-3">
+            <i class="pe-7s-browser"></i>
+          </div>
+          <div class="stat-content">
+            <div class="text-left dib">
+              <div class="stat-text">₹<span class="count">{{amount}}</span></div>
+              <div class="stat-heading">Total Amount Approved by Clerk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% else %}
+  <div class="col-sm-12">
+    <div class="card text-center">
+      <div class="card-header">
+        Hello
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Application Status</h5>
+        <p class="card-text">Dear Sir, Your Application has not approved yet. Please check again later</p>
+        <a href="#" class="btn btn-primary">Edit your profile</a>
+      </div>
+      <div class="card-footer text-muted">
+        Thakyou!
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% endblock body %}
+  <!--        <div class="col-sm-3 p-3 border"> -->
+  <!--            <form action="">-->
+
+  <!--                <label for="exampleInputEmail1">Select Year</label>-->
+  <!--                <select id="inputState" name="customerYearSelect" class="form-control">-->
+  <!--                  <option selected>Select Year</option>-->
+  <!--                  <option value="2021">2021</option>-->
+  <!--                  <option value="2022">2022</option>-->
+  <!--                  <option value="2022">2023</option>-->
+  <!--                </select>-->
+  <!--            </form>-->
+  <!--              -->
+  <!--        </div>-->

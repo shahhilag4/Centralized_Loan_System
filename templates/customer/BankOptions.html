@@ -1,0 +1,57 @@
+<!-- This page will show different bank options -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/bank_options_style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Roboto:wght@300&display=swap"rel="stylesheet" />
+    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="icon" href="../../static/img/logo1.png" type="image/jpg" sizes="16x16">
+
+    <title>Bank Options</title>
+</head>
+
+<body>
+    <section id="HOME">
+        <header>
+
+			<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="menu">
+				
+				<li><a href="/contactus" onclick="toggleMenu();">CONTACT US</a></li>
+			</ul>
+
+	
+		</header>
+        <div class="box1">
+            <div class="box1-content">
+                <h3 class="head2">Banks</h3>
+            </div>
+            <div class="center">
+                <div class="one">
+                <a href="/loanform/{{loan}}/sbi"><button class="btn"><img class="image1" src="../../static/img/sbi.png"></img><br/>Rate of Interest:8%</button></a>
+                <a href="/loanform/{{loan}}/hdfc"><button class="btn"><img class="image1" src="../../static/img/hdfc.png"></img><br />Rate of Interest:8%</button></a>
+                <a href="/loanform/{{loan}}/boi"><button class="btn"><img class="image1" src="../../static/img/boi.png"></img><br />Rate of Interest:8%</button></a>
+                
+            </div>
+            <div class="two">
+                <a href="/loanform/{{loan}}/icici"><button class="btn"><img class="image1" src="../../static/img/icici.png"></img><br />Rate of Interest:8%</button></a>
+                <a href="/loanform/{{loan}}/axis"><button class="btn"><img class="image1" src="../../static/img/axis.png"></img><br />Rate of Interest:8%</button>
+               <a href="/loanform/{{loan}}/kotak"><button class="btn"><img class="image1" src="../../static/img/kotak.png"></img><br />Rate of Interest:8%</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../static/js/java.js"></script>
+</body>
+
+</html>

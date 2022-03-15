@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Roboto:wght@300&display=swap"rel="stylesheet" />
+    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="icon" href="../../static/img/logo1.png" type="image/jpg" sizes="16x16">
+   
+
+    <title>Welcome</title>
+</head>
+
+<body>
+    <section id="HOME">
+        <header>
+			<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="menu">
+				<li><a href="/contactus" onclick="toggleMenu();">CONTACT US</a></li>
+                <li><a href="/emicalci" onclick="toggleMenu();">EMI CALCULATOR</a></li> 
+			</ul>
+		</header>
+        <div class="box1">
+            <div class="box1-content">
+                <h2 class="head">"A platform to foster change by connecting"</h2>
+                <h3 class="head2">Bank With People</h3>
+            </div>
+            <div class="center">
+                <a href="/customerregister"><button class="btn">Customer</button></a>
+                <a href="/clerkregister"> <button class="btn">Clerk</button></a>
+                <a href="/managerregister"><button class="btn">Bank Manager</button></a>
+            </div>
+        </div>
+        <section class="box2" id="ABOUT">
+            <div class="box2-heading">
+                <h3 class="head3">HOW IT WORKS</h3>
+            </div>
+            <div class="container">
+                <div class="pic">
+                    <img src="../../static/img/reg.png" alt="pic1" />
+                    <div class="hiw">
+                        <h4 class="h4">REGISTER YOUR DETAILS</h4>
+                        <p class="pp">
+                            The customer needs to register their details on the website by sharing some of the details given in the form.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pic">
+                    <img src="../../static/img/wait.png" alt="pic2" />
+                    <div class="hiw">
+                        <h4 class="h4">WAIT FOR APPROVAL</h4>
+                        <p class="pp">
+                            We will then send your form and documents for approval.This
+                            would save the precious time of patient and ensure faster delivery.If the documents are approved you will be eligible for the loan else we will revert 
+                            back to you with the issue in your application.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pic">
+                    <img src="../../static/img/tick.png" alt="pic3" />
+                    <div class="hiw">
+                        <h4 class="h4">CONNECTING YOU</h4>
+                        <p class="pp">
+                           We will try 
+                           to make the process as seamless as possible.We know the value of your time and we have kept the application process as well as the complete system as less time consuming as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="CONTACTUS">
+            <div class="container2">
+                <div class="row">
+
+					<div class="footer-col">
+						<h3>Navigate</h3>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/customerregister">New Customer</a></li>
+							<!-- <li><a href="../templates/customer/contactus.html">Contact Us</a></li> -->
+                            <li><a href="/contactus">Contact Us</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h3>Follow us</h3>
+						<div class="social-links">
+						
+							<a style="padding: 0;" href="#"><i class="fab fa-twitter"></i></a>
+							<a style="padding: 0;" href="#"><i class="fab fa-instagram"></i></a>
+							
+						</div>
+					</div>
+				</div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="../static/js/java.js"></script>
+</body>
+
+</html>

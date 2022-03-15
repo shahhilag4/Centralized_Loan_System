@@ -1,0 +1,53 @@
+{% extends 'manager/ManagerBase.html' %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+{% block body %}
+<div class="container-fluid mx-2">
+
+    <div class="table table-hover">
+
+        <table class="table-responsive table-striped table-bordered example" style="width:100%;border: 0px;">
+            <div class="container">
+                <h3>{{msg}}</h3>
+            </div>
+            <thead>
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Time</th>
+                    <th>Documents</th>
+                    <th>Total Loan</th>
+                    <th>Approve</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in files %}
+                <tr>
+                    <td>{{data.loantype}}</td>
+                    <td>{{data.date}}</td>
+                    <td>{{data.amount}}</td>
+                    <td>{{data.time}} months</td>
+                    <td><a href="/viewdocuments/{{data.customerid}}/{{data.pan}}"><button>View Documents</button></a></td>
+                    <td><a href="/track/{{data.customerid}}"><button class="btn1"> Track </button></a></td>
+                    {% if data.approve!='YES' %}
+                    <td><a href="/managerapprovecustomer/{{data.customerid}}/{{data.ifsc}}/{{data.loantype}}"><button>Approve</button></a> <a href="/managerremovecustomer/{{data.customerid}}/{{data.ifsc}}/{{data.loantype}}"><button>Reject</button></a> </td>
+                    {% else %}
+                    <td>Approved on {{data.date}}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- <script sre="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+    $('.example').DataTable();
+    </script>
+{% endblock body %}

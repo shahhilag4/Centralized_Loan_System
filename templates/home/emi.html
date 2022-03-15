@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>EMI-Calculator</title>
+  <link rel="stylesheet" href="../../static/css/emi.css">
+  <link rel="icon" href="../../static/img/logo1.png" type="image/jpg" sizes="16x16">
+
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+  
+  <header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <header>
+      <body>
+      <div id="border">   <!--border-->
+        <a style="text-decoration: none; padding: 10px; border: 1px solid black; background-color: rgb(58, 58, 247);" href="/">Home</a>
+        
+        <div id="emi-calculation">    <!--calculation part-->
+          
+          <p id="title"><strong>EMI Calculator<strong></p> 
+            
+            <div class="section">         <!--loan amount with input-->
+              <label id="loanamount" class="label">Loan Amount:(INR)</label>
+              <input type="number" class="input" id="value1" placeholder="Enter Loan amount.."></input>
+            </div>                        <!--loan amount with input closing-->
+            
+            <div class="section">   <!--interest rate with input-->
+               <label id="interestrate" class="label">Interest Rate:(%)</label>
+              <input type="number" class="input" id="value2" placeholder="Enter IR per year.."></input>
+            </div>              <!--interest rate with input closing-->
+            
+            <div class="section"> <!--loan terms with input-->
+               <label id="loanduration" class="label">Loan Duration(Months):</label>
+              <input type="number" class="input" id="value3" placeholder="Enter loan duration.."></input>
+            </div>   <!--loan terms with input closing-->
+        
+       
+     
+      <div class="submit">           <!--button-->
+     <button type="submit" id="calc" onclick="calculation()">Calculate</button>
+      </div>                          <!--button closing-->
+      
+        </div>    <!--Calculation part closing-->
+        
+        <div id="emi-output">
+          <div class="result">Monthly Interest: <span id="monthly-interest"></span>
+          </div>
+          <div class="result">Monthly Payment: <span id="monthly-payment"></span>
+          </div>
+          <div class="result">Total Repayment: <span id="total-repayment"></span>
+          </div>
+          <div class="result">Total Interest Cost: <span id="total-interest"></span>
+          </div>
+          
+        <div class="submit">           <!--button-->
+     <button type="submit" id="reset" onclick="reset()">Reset</button>
+      </div>                          <!--button closing-->  
+          
+        </div>
+      
+      </div> <!--border closing-->
+    </body>
+</html>
+<!-- partial -->
+  <script  src="../../static/js/emi.js"></script>
+
+</body>
+</html>

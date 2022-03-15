@@ -1,0 +1,23 @@
+<!-- Customer will able to edit their profile. -->
+
+{% extends 'customer/DashboardBase.html' %}
+{% block body %}
+{{message}}
+<form enctype = "multipart/form-data" action="/customerupdate/{{e}}" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Upload Pic</label>
+    <input type="file" class="form-control" id="exampleInputEmail1" name="displayPic">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="customerName" aria-describedby="emailHelp"  value="{{name}}">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Phone No.</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="customerPhone" value="{{phone}}">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock body %}

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<title>Customer-Login</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../static/css/login.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+</head>
+
+<body>
+<section id="HOME">
+		<header>
+			<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="menu">
+				<li><a href="/contactus" onclick="toggleMenu();">CONTACT US</a></li>
+			</ul>
+		</header>
+	<div class="card">
+		<form action="/customerlogin" method="POST">
+			<h2 class="title">Customer Login</h2>
+			{% if err %}
+			<h5 style="color: rgb(226, 26, 26);">{{err}}</h5>
+			{% endif %}
+	
+			{% if message %}
+			<h5 style="color: rgb(226, 26, 26);">{{message}}</h5>
+			{% endif %}
+			<p class="or"></p>
+			<div class="email-login">
+			
+				<label for="email"> <b>User Id</b></label>
+				<input type="text" placeholder="User Id" name="customerEmail" required>
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="customerPass" required>
+			</div>
+			<button type="submit" class="cta-btn">Login</button>
+			<div class="selectOp">
+                <p>New here ?<a href="/customerregister">&nbsp;Create</a>&nbsp;here now</p>
+            </div>
+		</section>
+	</form>
+    </div>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+
+<!-In this section bank manager will approve or remove the details of customer. -->
+
+{% extends 'manager/ManagerBase.html' %}
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+{% block body %}
+<div class="container-fluid mx-2">
+
+    <div class="table table-hover">
+
+        <table class="table-responsive table-striped table-bordered example" style="width:100%;border: 0px;">
+            <div class="container">
+                <h3>{{msg}}</h3>
+            </div>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Username</th>
+                    <th>D.O.J</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in details %}
+                <tr>
+                    <td style="padding: 5px;">{{loop.index}}</td>
+
+                    <td style="padding: 5px;">{{i.name}}</td>
+                    <td style="padding: 5px;">{{i.phone}}</td>
+                    <td style="padding: 5px;">{{i.username}}</td>
+                    <td style="padding: 5px;">{{i.date}}&nbsp;at&nbsp;{{i.time}}</td>
+
+                    <td style="padding: 5px;">
+                        {% if i.approve=='No' %}
+                        <a href="/approveclerk/{{i.id}}" type="button"
+                            class="btn btn-info btn-sm mx-1">Approve</button></a>
+                            
+                        {% else %}
+                            Approved
+                        {% endif %}
+                        <a href="/removeclerk/{{i.id}}" type="button"
+                            class="btn btn-success btn-sm mx-1">Remove</button></a>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+    $('.example').DataTable();
+    </script>
+{% endblock body %}

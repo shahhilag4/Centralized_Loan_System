@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>Capture picture from your webcam</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+    <style>
+        .hide
+        {
+            visibility: hidden;
+        }
+        .show
+        {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="camera" style="height:auto;width:auto; text-align:left;"></div>
+
+    <!--FOR THE SNAPSHOT-->
+    <input type="button" value="Take a Snap" id="btPic" onclick="takeSnapShot(); displayTime();" /> 
+    <input type="button" value="Submit" class="hide" id="btPic1" onclick="redirect();" /> 
+    <p id="snapShot"></p>
+</body>
+
+<script>
+    // CAMERA SETTINGS.
+    Webcam.set({
+        width: 220,
+        height: 190,
+        image_format: 'jpeg',
+        jpeg_quality: 100
+    });
+    Webcam.attach('#camera');
+
+    // SHOW THE SNAPSHOT.
+    takeSnapShot = function () {
+        Webcam.snap(function (data_uri) {
+            document.getElementById('snapShot').innerHTML = 
+                '<img src="' + data_uri + '" width="70px" height="50px" />';
+            var formDataToSend = new FormData();
+            formDataToSend.append("image", data_uri);
+            var request = new XMLHttpRequest();
+            request.open("POST", "http://127.0.0.1:5000/capture/{{aadhar}}");
+            request.send(formDataToSend);
+        });
+    }
+    function displayTime() {
+    var str = "";
+    document.getElementById('btPic1').classList.remove('hide');    
+    document.getElementById('btPic1').classList.add('show');    
+    var currentTime = new Date()
+    var hours = currentTime.getHours()
+    var minutes = currentTime.getMinutes()
+    var seconds = currentTime.getSeconds()
+
+    if (minutes < 10) {
+        minutes = "0" + minutes
+    }
+    if (seconds < 10) {
+        seconds = "0" + seconds
+    }
+    str += hours + ":" + minutes + ":" + seconds + " ";
+    if(hours > 11){
+        str += "PM"
+    } else {
+        str += "AM"
+    }
+    console.log(str);
+}
+redirect = function()
+{
+    location.replace("/success");
+}
+</script>
+</html>

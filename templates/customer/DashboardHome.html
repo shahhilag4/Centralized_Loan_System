@@ -1,0 +1,224 @@
+{% extends 'customer/DashboardBase.html' %}
+{% block body %}
+<div class="container text-center my-3 border">
+    <h4>Customer Section</h4>
+    <div class="row mx-2 my-3">
+
+        <div class="col-sm-3 p-3 border"> 
+            <div class="stat-text">Customer ID</div>
+            <div class="stat-heading">{{cid}}</div>
+        </div>
+        <div class="col-sm-3 p-3 border"> 
+            <div class="stat-text">Name</div>
+            <div class="stat-heading">{{name}}</div>
+        </div>
+        <div class="col-sm-3 p-3 border"> 
+
+            <div class="stat-text">Pan Number</div>
+            <div class="stat-heading">{{pan}}</div>
+        </div>
+        <div class="col-sm-3 p-3 border">
+            <div class="stat-text">Wallet</div>
+            <div class="stat-heading">{{wallet}}</div>
+            <div class="razorpay-embed-btn" style="margin-left: -1rem;" data-url="https://rzp.io/l/paypanchrantna" data-text="Add Money" data-color="#528FF0" data-size="small">
+                <script>
+                (function(){
+                var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+                if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+                s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
+                rzp && rzp.init && rzp.init()}})();
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-1">
+                        <i class="pe-7s-cash"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{amount}}</span></div>
+                            <div class="stat-heading">Total Loan Taken</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-2">
+                        <i class="pe-7s-calculator"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{emiAmount}}</span></div>
+                            <div class="stat-heading">Current Month EMI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-3">
+                        <i class="pe-7s-browser"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{paidloan}}</span></div>
+                            <div class="stat-heading">Total Paid Loan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-4">
+                        <i class="pe-7s-like2"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{pendingloan}}</span></div>
+                            <div class="stat-heading">Total Pending Loan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<hr>
+{% for data in files %}
+
+<div class="container text-center my-3 border">
+    <div class="row mx-2 my-3">
+
+        <div class="col-sm-3 p-3 border">
+            <div class="stat-text">BANK</div>
+            <div class="stat-heading">{{data.bank}}</div>
+        </div>
+        <div class="col-sm-3 p-3 border">
+            <div class="stat-text">BRANCH</div>
+            <div class="stat-heading">{{data.branch}}</div>
+        </div>
+        <div class="col-sm-3 p-3 border">
+            <div class="stat-text">LOANTYPE</div>
+            <div class="stat-heading">{{data.loantype}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-1">
+                        <i class="pe-7s-cash"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{data.amount}}</span></div>
+                            <div class="stat-heading">Total Loan Taken</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-2">
+                        <i class="pe-7s-calculator"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{data.emi}}</span></div>
+                            <div class="stat-heading">Current Month EMI</div>
+                            <a href="/paynow/{{cid}}/{{data.loantype}}/{{data.branch}}"><button class="btn1">Pay Now</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-3">
+                        <i class="pe-7s-browser"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{data.paidloan}}</span></div>
+                            <div class="stat-heading">Total Paid Loan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-five">
+                    <div class="stat-icon dib flat-color-4">
+                        <i class="pe-7s-like2"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="text-left dib">
+                            <div class="stat-text">₹<span class="count">{{data.pendingloan}}</span></div>
+                            <div class="stat-heading">Total Pending Loan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
+
+{% endblock body %}
+<!-- <div class="col-sm-12">
+    <div class="card text-center">
+        <div class="card-header">
+            Hello
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">IF bhara hai loan application</h5>
+            <p class="card-text">Dear Sir, abhi apke form ka status pending hai Neeched diye gaye link pe jake aap apne approval ka status jan skte hain</p>
+            <a href="#" class="btn btn-primary">Check Loan Status</a>
+          </div>
+          <div class="card-footer text-muted">
+            Thakyou!
+          </div>
+    </div>
+</div>  -->

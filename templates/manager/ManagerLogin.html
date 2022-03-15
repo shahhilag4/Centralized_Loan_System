@@ -1,0 +1,51 @@
+<!-- Login section of manager -->
+
+
+<head>
+	<title>Manager Login</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../static/css/login.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+</head>
+
+<body>
+<section id="HOME">
+		<header>
+			<a href="/" class="logo"><img src="../../static/img/logo.png" alt="logo" /></a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="menu">
+				<li><a href="/contactus" onclick="toggleMenu();">CONTACT US</a></li>
+			</ul>
+		</header>	
+	<div class="card">
+		<form action="/managerlogin" method="POST">
+			<h2 class="title"> Log in</h2>
+			{% if err %}
+			<h5 style="color: rgb(226, 26, 26);">{{err}}</h5>
+			{% endif %}
+	
+			{% if message %}
+			<h5 style="color: rgb(226, 26, 26);">{{message}}</h5>
+			{% endif %}
+			<p class="or"></p>
+			
+			<div class="email-login">
+				
+				
+
+				<label for="email"> <b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="managerUser" required>
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="managerPass" required>
+			</div>
+			<button type="submit" class="cta-btn">Login</button>
+			<div class="selectOp">
+                <p>New here ?<a href="/managerregister">&nbsp;Create</a>&nbsp;here now</p>
+            </div>
+		</section>
+	</form>
+</div>
+</section>
+</body>
+</html>
