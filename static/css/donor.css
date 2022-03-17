@@ -1,0 +1,147 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #384047;
+}
+.sect {
+  margin-top: 84px;
+}
+footer {
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  margin-top: 84px;
+  padding: 20px 35px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+legend
+{
+  padding: 1rem 0rem 0rem 0rem; 
+}
+
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  width: 12rem;
+  border-radius: 2px;
+}
+
+p
+{
+  text-align: center;
+  font-weight: 800;
+}
+.drag-area
+{
+  padding: 0.5rem 0rem 1rem 0rem;
+  display: flex;
+}
+
+.drag-area>input
+{
+  padding: 0.25rem 0rem 0.25rem 0rem;
+}
+
+.drag-area>button
+{
+  padding: 10px 32px 10px 32px;
+  color: #fff;
+  background-color: #3498db;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #3498db;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-style: normal;
+  width: 7rem;
+  height:2.5rem
+}
+
+#submit {
+  padding: 10px 39px 10px 39px;
+  color: #fff;
+  background-color: #3498db;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  height:3.5rem;
+  border: 1px solid #3498db;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #3498db;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  form {
+    max-width: 510px;
+  }
+}

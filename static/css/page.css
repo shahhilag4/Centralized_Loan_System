@@ -1,0 +1,103 @@
+body{
+    background-color: #3498db;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+}
+.card{
+    background: white;
+    border-radius: 4px;
+    height: 60vh;
+    width: 70vh;
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 25px;
+    margin-left: 80px;
+    margin-top: 65px;
+}
+img.bluetick{
+    height: 200px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+p{
+    font-size: 14px;
+    color: rgb(117, 117, 117);
+}
+
+@media only screen and (max-width:1000px) and (min-width:900px){
+    .card{
+        height: 50vh;
+        width: 50vh;
+    }
+    img.bluetick{
+        height: 100px;
+        width: 150px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:900px) and (min-width:700px){
+    .card{
+        height: 50vh;
+        width: 40vh;
+        margin-left: 70px;
+    }
+    img.bluetick{
+        height: 100px;
+        width: 100px;
+    }
+    p{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width:700px) and (min-width:450px){
+    .card{
+        height: 50vh;
+        width: 45vh;
+        margin: auto;
+    }
+    img.bluetick{
+        height: 80px;
+        width: 70px;
+    }
+    p{
+        font-size:13px ;
+    }
+}
+@media only screen and (max-width:450px) and (min-width:400px){
+    .card{
+        height: 50vh;
+        width: 40vh;
+        margin: auto;
+    }
+    img.bluetick{
+        height: 60px;
+        width: 50px;
+    }
+    p{
+        font-size:10px ;
+    }
+}
+@media only screen and (max-width:400px) and (min-width:230px){
+    .card{
+        height: 40vh;
+        width: 20vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    img.bluetick{
+        height: 40px;
+        width: 40px;
+    }
+    p{
+        font-size:10px ;
+    }
+}

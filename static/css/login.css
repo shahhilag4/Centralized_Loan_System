@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
+
+:root
+{
+  -moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	-webkit-appearance: none;
+
+}
+
+
+body { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C5C9A;
+  background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+  margin-top: 5rem;
+  font-family: 'Ubuntu', sans-serif;
+  /* margin-bottom: 5rem; */
+ 
+}
+
+.card {
+  /* font-family: sans-serif; */
+  width: 400px;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom:3em; */
+  margin: 5rem;
+  border-radius: 10px;
+  background: #f8f8f8;
+  padding: 1.8rem;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+
+.or {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ECECEC;
+  line-height: 0.1em;
+  margin: 25px 0;
+}
+
+.email-login {
+  display: flex;
+  flex-direction: column;
+}
+.email-login label {
+  display: block;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 15px 20px;
+  margin-top: 8px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #dddddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+select {
+  padding: 12px 18px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+select .option{
+  font-size: 14px;
+
+}
+
+.cta-btn {
+  background-color: #1C5C9A;  
+  color: white;
+  padding: 18px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+button{
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.selectOp{
+  text-align: center;
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 360px) {
+  .card
+  {
+    width:16rem;
+  }
+}
+@media screen and (max-width: 360px) and (min-width:265px)
+{
+  .card
+  {
+    width:12rem;
+    max-height: 559px;
+  }
+}
+@media screen and (max-width: 265px) and (min-width:240px)
+
+{
+
+  .card
+  {
+    width:10rem;
+  }
+}  
+@media screen and (max-width: 240px) and (min-width:200px)
+
+{
+
+  .card
+  {
+     width:8rem;
+  }
+}  
+@media screen and (max-width: 200px)
+
+{
+  .card
+  {
+    width:5rem;
+  }
+}  

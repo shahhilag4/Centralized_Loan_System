@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: #015d90;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  color: white;
+}
+.navigation.active {
+  width: 50px;
+}
+
+.navigation ul li:hover {
+  background: white;
+  color: black;
+}
+.navigation ul li:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.navigation ul li:nth-child(1):hover {
+  background: transparent;
+}
+
+.navigation ul li .fa:hover {
+  background: white;
+  color: black;
+}
+.navigation ul li a {
+  position: relative;
+  color: white;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+.navigation ul li a:hover {
+  color: black;
+  background: white;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+}
+.navigation ul li a .fa {
+  font-size: 24px;
+  margin-top: 14px;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.main {
+  position: absolute;
+  width: 100%;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: white;
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 50px);
+
+  left: 50px;
+}
+.main .topbar {
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.user {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  display: flex;
+  position: block;
+  justify-content: right;
+}
+
+.imgcon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toggle::before {
+  content: "\f0c9";
+  font-family: fontAwesome;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  font-size: 24px;
+  text-align: center;
+  color: #111;
+}

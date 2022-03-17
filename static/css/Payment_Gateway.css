@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background: #1C5C9A;
+  margin: 0 10px;
+}
+
+.payment{
+  background: #f8f8f8;
+  max-width: 450px;
+  margin: 20px auto;
+  height: auto;
+  padding: 35px;
+  padding-top: 35px;
+  border-radius: 10px;
+  position: relative;
+}
+
+hr
+{
+  text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #ECECEC;
+    line-height: 0.1em;
+    opacity: 0.3;
+    margin: 25px 0;
+}
+.payment h2{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #0d3c61;
+}
+
+.form .label{
+  display: block;
+  color: #555555;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.input{
+  padding: 13px 0px 13px 0px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  outline: none;
+  font-size: 16px;
+  color: #555555;
+}
+
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+.space{
+  margin-bottom: 20px;
+}
+
+.icon-relative{
+  position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.btn{
+  margin-top: 40px;
+  background: #1C5C9A;
+  padding: 12px;
+  text-align: center;
+  color: #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 420px){
+  .card-grp{
+    flex-direction: column;
+  }
+  .card-item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}

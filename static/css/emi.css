@@ -1,0 +1,103 @@
+#border{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0rem;
+  /* position: absolute;
+  transform: translate(50%, 15%); */
+}
+
+#emi-calculation{
+  width: 500px;
+  height: 300px;
+  border: 2px solid #3498db;
+  /* box-shadow: 2px 5px 5px gray; */
+  border-radius: 5px;
+   background-color: #B5B5B8;
+}
+#title{
+  font-size: 30px;
+  font-family: "Noto Serif JP", sans-serif;
+  color: #3498db;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#emi-output{
+  width: 300px;
+  height: 300px;
+  border: 2px solid #3498db;
+  /* box-shadow: 2px 5px 5px gray; */
+  border-radius: 5px;
+  margin-top: 10px;
+   background-color: #B5B5B8;
+}
+
+.section{
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+.result{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 5px;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.input{
+  float: right;
+  height: 20px;
+  margin-right: 10px;
+}
+
+ #calc,#reset{
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #3498db;
+  /* box-shadow: 2px 5px 5px gray;  */
+}
+.submit{
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+#reset{
+  background-color: #ECD73A;
+}
+
+@media screen and (max-width: 500px){
+  #border{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .label,.result{
+    font-size: 10px;
+  }
+  #title{
+    font-size: 20px;
+  }
+  #emi-calculation{
+    max-width: 100%;
+  }
+  #emi-output{
+    max-width: 100%;
+    
+  }
+  .section{
+    font-size: 16px;
+  }
+  .input{
+    width: 100px;
+  }
+  #calc, #reset{
+    width: 100px;
+  }
+  
+}
