@@ -22,7 +22,7 @@ app.secret_key = "@13@6$$#ddfccv"
 clientManager = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/managerDb?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 clientClerk = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/authentication?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 
-#Connecting customer database
+#Connecting customer database database
 
 clientCustomer = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/customerAuth?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 clientContact = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/contact?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
