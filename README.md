@@ -24,7 +24,9 @@ Project Documentation
 </ol>
 </p>
 
-<div align="center"><img src="ps.jpg" style="height: 300px;" /></div>
+<div align="center">
+<img width="164" alt="Logo1" src="https://user-images.githubusercontent.com/64307441/220332042-c28b1971-81ae-4991-b90a-9148aef55808.jpg">
+</div>
 
 <hr>
 <h3 align="center">Unique Features</h3>
@@ -53,11 +55,10 @@ Project Documentation
 <br>
 <br>
 
-<!-- 
-<h4 align="center"><b>Video Demonstartion can be found<a href="#">here</a>.</b></h4>
+<h4 align="center"><b>Video Demonstartion can be found<a href="https://youtu.be/rt8Sfes9Fxs
+">here</a>.</b></h4>
 <br>
 <br>  
--->
 
 <hr>
 <h3 align="center">Tech stack</h3>
