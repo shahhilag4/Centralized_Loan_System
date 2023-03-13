@@ -19,15 +19,15 @@ app.secret_key = "@13@6$$#ddfccv"
 
 #Connecting manager database
 
-clientManager = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/managerDb?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
-clientClerk = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/authentication?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
+clientManager = "mongodb+srv://hilag:hilag@cluster0.6y4qh.mongodb.net/sih?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
+clientClerk = "mongodb+srv://hilag:hilag@cluster0.6y4qh.mongodb.net/sih?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 
 #Connecting customer database database
 
-clientCustomer = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/customerAuth?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
-clientContact = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/contact?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
+clientCustomer = "mongodb+srv://hilag:hilag@cluster0.6y4qh.mongodb.net/sih?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
+clientContact = "mongodb+srv://hilag:hilag@cluster0.6y4qh.mongodb.net/sih?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 
-clientPublic = "mongodb+srv://rajshukla1102:rajshukla1102@cluster0.eszou.mongodb.net/public?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
+clientPublic = "mongodb+srv://hilag:hilag@cluster0.6y4qh.mongodb.net/sih?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 
 
 
