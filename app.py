@@ -32,11 +32,11 @@ clientPublic = "mongodb+srv://hilag:hilag@cluster0.6y4qh.mongodb.net/sih?retryWr
 
 
 
-clusterManager = MongoClient(clientManager)
-clusterClerk = MongoClient(clientClerk)
-clusterCustomer = MongoClient(clientCustomer)
-clusterContact = MongoClient(clientContact)
-clusterPublic = MongoClient(clientPublic)
+clusterManager = MongoClient(clientManager,authSource="admin")
+clusterClerk = MongoClient(clientClerk,authSource="admin")
+clusterCustomer = MongoClient(clientCustomer,authSource="admin")
+clusterContact = MongoClient(clientContact,authSource="admin")
+clusterPublic = MongoClient(clientPublic,authSource="admin")
 
 dbManager = clusterManager["managerDb"]
 managerAuth = dbManager['managerAuth']
